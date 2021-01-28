@@ -7,6 +7,7 @@
     //test connection
     //echo "Connected Successfully";
 
+    //sql query
     $sql = "SELECT name, info FROM medicine ORDER BY name DESC";
     $result = $conn->query($sql);
 
@@ -20,6 +21,6 @@
         echo "geen resultaten";
     }
 
-
+    //close connection
     CloseCon($conn);
 ?>
