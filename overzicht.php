@@ -8,7 +8,7 @@
     //echo "Connected Successfully";
 
     //sql query
-    $sql = "SELECT name, info FROM medicine ORDER BY name DESC";
+    $sql = "SELECT name, info FROM medicine ORDER BY name ASC";
     $result = $conn->query($sql);
 
     if ($result->num_rows > 0) {
