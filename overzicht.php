@@ -14,7 +14,7 @@
     if ($result->num_rows > 0) {
         //output data of each row
         while($row = $result->fetch_assoc()){
-            echo "naam: ". $row['name']. " - Info: " .$row["info"]. "<br>";
+            echo "Naam: ". $row['name']. " - Info: " .$row["info"]. "<br>";
         }
     }
     else {
