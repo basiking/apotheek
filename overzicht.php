@@ -1,7 +1,6 @@
 <?php
     //database connection
     include 'db_connection.php';
-
     $conn = OpenCon();
 
     //test connection
