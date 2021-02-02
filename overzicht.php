@@ -1,11 +1,8 @@
 <?php
     //database connection
+    include 'includes/head.inc.php';
     include 'includes/db_connection.php';
     $conn = OpenCon();
-
-    //test connection
-    //echo "Connected Successfully";
-
     //sql query
     $sql = "SELECT name, info FROM medicine ORDER BY name ASC";
     $result = $conn->query($sql);
