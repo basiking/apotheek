@@ -32,6 +32,9 @@
   <li class="nav-item">
     <a class="nav-link" href="overzicht.php">Voorlichting</a>
   </li>
+  <li class="nav-item">
+    <a class="nav-link" href="contact.php">Contact</a>
+  </li>
 </ul>
 </nav>
 </div>
