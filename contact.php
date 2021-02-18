@@ -3,7 +3,7 @@ include 'includes/head.inc.php';
 include 'includes/db_connection.php';
 ?>
 
-<div class='container-fluid'>
+<div class='container-fluid col-md-4 col-md-offset-4'>
     <h3>Contactpagina</h3>
     <form action='bedankt.php' method='post'>
         <div class="form-group">
