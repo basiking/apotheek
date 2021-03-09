@@ -66,13 +66,20 @@ function CloseCon($conn)
 </div>
 
         
-<div class="loginpage"> 
-<form method="post" action="check.php">
-            Gebruikersnaam: <input type="text" name="username" size="20" maxlength="20"><br />
-            Wachtwoord: <input type="password" name="wachtwoord" size="20" maxlength="20"><br /><br />
-            <input type="submit" value="Log in!" />
-        </form><br /><br />
+<div class='container-fluid col-md-4 col-md-offset-4 center_div'>
+<h3>Loginpagina</h3>
+    <form>
+    <div class="form-group">
+    <label for="exampleInputEmail1">Gebruikersnaam</label>
+    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="gebruikersnaam" placeholder="Vul hier uw gebruikersnaam in.">
+  </div>
+  <div class="form-group">
+    <label for="exampleInputPassword1">Wachtwoord</label>
+    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Vul hier uw wachtwoord in.">
+  </div>
 
+  <button type="submit" class="btn btn-primary">Inloggen</button>
+    </form>
 </div>
 
 
