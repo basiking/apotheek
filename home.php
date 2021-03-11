@@ -41,34 +41,57 @@
         tabindex="0"></iframe>
     </div>
   </div>
+
   <div class="row">
+     <div class="col-sm-6 offset-sm-1">
+     <table class="table table-striped">                     
+    <div class="table responsive">
+        <thead>
+            <tr>
+              <th>Titel</th>
+              <th>Nieuws</th>
+              <th>Datum</th>
+            </tr>
+        </thead>
+        <tbody>
+     <?php  //sql query
+     $sql = "SELECT title, content, date FROM news WHERE date <= CURRENT_DATE ORDER BY date DESC LIMIT 3";
+     $result = $conn->query($sql);
 
-  </div>
-</div>
+     if ($result->num_rows > 0) {
+      // output data of each row
+      while($row = $result->fetch_assoc()) {
+          echo '<tr>
+                    <td scope="row">' . $row["title"]. '</td>
+                    <td>' . $row["content"] .'</td>
+                    <td> '.$row["date"] .'</td>
+                  </tr>';
+      }
+  } else {
+      echo "Geen resultaten";
+  } 
 
-<div class="container-fluid">
-  <div class="row">
-    <div class="col-sm-6 offset-sm-1">
-      <?php  //sql query
-    $sql = "SELECT title, content, date FROM news WHERE date <= CURRENT_DATE ORDER BY date DESC LIMIT 3";
-    $result = $conn->query($sql);
+    //  if ($result->num_rows > 0) {
+    //     //output data of each row
+    //     while($row = $result->fetch_assoc()){
+    //         echo "Titel: ". $row['title']. "<br>  " .$row["content"]. "<br>".$row['date']. "<br>";
+    //     }
+    //  }
+    //  else {
+    //     echo "geen resultaten";
+    //  }
 
-    if ($result->num_rows > 0) {
-        //output data of each row
-        while($row = $result->fetch_assoc()){
-            echo "Titel: ". $row['title']. "<br>  " .$row["content"]. "<br>".$row['date']. "<br>";
-        }
-    }
-    else {
-        echo "geen resultaten";
-    }
-
-    //close connection
-    CloseCon($conn);
-?>
+     //close connection
+     CloseCon($conn);
+   ?>
+         </tbody>
     </div>
+</table>
   </div>
+ </div>
 </div>
+
+
 
 <?php
     include 'includes/footer.php';
