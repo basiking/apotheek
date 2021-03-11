@@ -58,7 +58,28 @@
   </div>
 </div>
   
+<div class="container-fluid">
+    <div class="row">
+        <div class="voorlichting-content col-3 offset-1 border border-dark">
+            <b>Openingstijden</b>
+            <p>Maandag: 09:00-20:00</p>
+            <p>Dinsdag: 09:00-20:00</p>
+            <p>Woensdag: 09:00-20:00</p>
+            <p>Donderdag: 09:00-20:00</p>
+            <p>Vrijdag: 09:00-20:00</p>
+            <p>Zaterdag: 12:00-16:00</p>
+            <p>Zondag: 12:00-16:00</p>
+          
+        </div> 
 
+        <div class="voorlichting-content col-3 offset-1 border border-dark">
+            <b>Adres</b>
+            <p>Hofstraat 13</p>
+            <p>1741 CD Schagen</p>
+        </div> 
+  </div>
+
+</div>
 
 
   <div class="row">
