@@ -11,7 +11,7 @@
 <div class="container-fluid">
   <div class="row">
     <div class="col-sm-6 offset-sm-1">
-      <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+      <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel" data-interval="4000">
         <div class="carousel-inner">
           <div class="carousel-item active">
             <img src="images/slideshow1.jpg" class="d-block w-100" alt="Klant bij balie">
@@ -24,14 +24,14 @@
           </div>
         </div>
       </div>
-      <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+      <!-- <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
         <span class="sr-only">Previous</span>
       </a>
       <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
         <span class="carousel-control-next-icon" aria-hidden="true"></span>
         <span class="sr-only">Next</span>
-      </a>
+      </a> -->
     </div>
 
     <div class="col-sm-3 offset-sm-1">
@@ -42,19 +42,38 @@
     </div>
   </div>
 
+<div class="row">
+  <div class="col-sm-6 offset-sm-1">
+    <br>
+    <h5>Onze service</h5>
+
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-sm-10 offset-sm-1 ">
+    <a href="#" class="btn btn-primary btn-xlarge drie" role="button">Herhaalservice</button></a>
+    <a href="overzicht.php" class="btn btn-primary btn-xlarge drie" role="button">Medicijnenoverzicht</button></a>
+    <a href="loginpage.php" class="btn btn-primary btn-xlarge drie" role="button">Inschrijven</button></a>
+  </div>
+</div>
+  
+
+
+
   <div class="row">
-     <div class="col-sm-6 offset-sm-1">
-     <table class="table table-striped">                     
-    <div class="table responsive">
-        <thead>
+    <div class="col-sm-6 offset-sm-1">
+      <table class="table table-striped">
+        <div class="table responsive">
+          <thead>
             <tr>
               <th>Titel</th>
               <th>Nieuws</th>
               <th>Datum</th>
             </tr>
-        </thead>
-        <tbody>
-     <?php  //sql query
+          </thead>
+          <tbody>
+            <?php  //sql query
      $sql = "SELECT title, content, date FROM news WHERE date <= CURRENT_DATE ORDER BY date DESC LIMIT 3";
      $result = $conn->query($sql);
 
@@ -70,26 +89,14 @@
   } else {
       echo "Geen resultaten";
   } 
-
-    //  if ($result->num_rows > 0) {
-    //     //output data of each row
-    //     while($row = $result->fetch_assoc()){
-    //         echo "Titel: ". $row['title']. "<br>  " .$row["content"]. "<br>".$row['date']. "<br>";
-    //     }
-    //  }
-    //  else {
-    //     echo "geen resultaten";
-    //  }
-
-     //close connection
      CloseCon($conn);
    ?>
-         </tbody>
+          </tbody>
+        </div>
+      </table>
     </div>
-</table>
   </div>
- </div>
-</div>
+  </div>
 
 
 

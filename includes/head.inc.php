@@ -16,28 +16,33 @@
 
 <body>
 <div class="container-fluid">
+<div class="container-fluid ">
     <div class="row">
     <div class="offset-sm-1 col-sm-11">
     <a href="home.php"><img src="images/logo.png" alt="logo" class="logo"></a>
     </div>
     </div>
+</div>
 <nav>
-<ul class="nav justify-content-center nav-fill">
+<div class="container-fluid">
+<ul class="nav nav-pills justify-content-center nav-fill">
   <li class="nav-item">
-    <a class="nav-link active" href="home.php">Home</a>
+    <a class="nav-link active mr-1  mb-1" href="home.php">Home</a>
   </li>
   <li class="nav-item">
-    <a class="nav-link" href="service.php">Service</a>
+    <a class="nav-link active ml-1  mb-1" href="service.php">Service</a>
   </li>
   <li class="nav-item">
-    <a class="nav-link" href="overzicht.php">Voorlichting</a>
+    <a class="nav-link active ml-1  mb-1" href="overzicht.php">Voorlichting</a>
   </li>
   <li class="nav-item">
-    <a class="nav-link" href="contact.php">Contact</a>
+    <a class="nav-link active ml-1  mb-1" href="contact.php">Contact</a>
   </li>
   <li class="nav-item">
-    <a class="nav-link" href="loginpage.php">Login</a>
+    <a class="nav-link active ml-1  mb-1" href="loginpage.php">Login</a>
   </li>
 </ul>
 </nav>
+</div>
+</div>
 </div>
