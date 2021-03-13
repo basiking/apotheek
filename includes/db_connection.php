@@ -13,6 +13,7 @@ function OpenCon()
             die("Connection failed: " . mysqli_connect_error());
         }
         return $conn;
+        
     }
 
 function CloseCon($conn)

@@ -1,7 +1,5 @@
 <?php
 if(isset($_POST["submit"])){
-
-    
     require_once 'functies.inc.php';
 
     $gebruikersnaam = $_POST["gebruikersnaam"];

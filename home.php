@@ -1,13 +1,8 @@
 <?php
     include 'includes/head.inc.php';
     include 'includes/db_connection.php';
-
     $conn = OpenCon();
-
 ?>
-
-
-
 <div class="container-fluid">
   <div class="row">
     <div class="col-sm-6 offset-sm-1">
@@ -69,7 +64,6 @@
             <p>Vrijdag: 09:00-20:00</p>
             <p>Zaterdag: 12:00-16:00</p>
             <p>Zondag: 12:00-16:00</p>
-          
         </div> 
 
         <div class="voorlichting-content col-3 offset-1 border border-dark">

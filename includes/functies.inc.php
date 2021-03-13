@@ -113,8 +113,8 @@ function loginUser($conn, $gebruikersnaam, $password){
     }
     else if ($checkPassword === true){
         session_start();
-        $_SESSION["userid"] = $gebruikerExists["userID"];
-        $_SESSION["username"] = $gebruikerExists["gebruikersnaam"];
+        $_SESSION["userID"] = $gebruikerExists["userID"];
+        $_SESSION["username"] = $gebruikerExists["username"];
         header("location: ../home.php");
         exit();
     }

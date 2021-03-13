@@ -1,6 +1,8 @@
+<?php
+session_start();
+?>
 <!doctype HTML>
 <html lang ="nl">
-
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -38,9 +40,19 @@
   <li class="nav-item">
     <a class="nav-link active ml-1  mb-1" href="contact.php">Contact</a>
   </li>
-  <li class="nav-item">
-    <a class="nav-link active ml-1  mb-1" href="loginpage.php">Login</a>
-  </li>
+  <?php 
+    if (isset($_SESSION['userID'])){
+      echo "<li class='nav-item'>";
+      echo "<a class='nav-link active ml-1  mb-1' href='mijnapo.php'>Mijn apo</a></li>";
+      echo "<li class='nav-item'>";
+      echo "<a class='nav-link active ml-1  mb-1' href='includes/loguit.inc.php'>Loguit</a></li>";
+    }
+    else{
+      echo "  <li class='nav-item'>";
+      echo "<a class='nav-link active ml-1  mb-1' href='loginpage.php'>Login</a></li>";
+    }
+  ?>
+
 </ul>
 </nav>
 </div>
