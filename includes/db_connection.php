@@ -8,10 +8,11 @@ function OpenCon()
         $dbpass = "admin";
         $db = "pharmacy";
 
-        //database connection
-        $conn = new mysqli($dbhost, $dbuser, $dbpass, $db) or die("Connect failed: %s\n". $conn -> error);
-
-        return  $conn;
+        $conn = mysqli_connect($dbhost, $dbuser, $dbpass, $db);
+        if (!$conn) {
+            die("Connection failed: " . mysqli_connect_error());
+        }
+        return $conn;
     }
 
 function CloseCon($conn)
