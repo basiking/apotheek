@@ -116,6 +116,7 @@ function loginUser($conn, $gebruikersnaam, $password){
         $_SESSION["userID"] = $gebruikerExists["userID"];
         $_SESSION["username"] = $gebruikerExists["username"];
         $_SESSION["email"] = $gebruikerExists["email"];
+        $_SESSION["creationDate"] = $gebruikerExists["creationDate"];
         header("location: ../home.php");
         exit();
     }
