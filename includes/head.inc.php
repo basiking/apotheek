@@ -29,7 +29,7 @@ session_start();
 <div class="container-fluid">
 <ul class="nav nav-pills justify-content-center nav-fill">
   <li class="nav-item">
-    <a class="nav-link active mr-1  mb-1" href="home.php">Home</a>
+    <a class="nav-link active   mb-1" href="home.php">Home</a>
   </li>
   <li class="nav-item">
     <a class="nav-link active ml-1  mb-1" href="service.php">Service</a>
