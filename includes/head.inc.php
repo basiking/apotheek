@@ -42,12 +42,14 @@ session_start();
   </li>
   <?php 
     if (isset($_SESSION['userID'])){
+          //Data that is only shown if the user is logged in
       echo "<li class='nav-item'>";
       echo "<a class='nav-link active ml-1  mb-1' href='mijnapo.php'>Mijn apo</a></li>";
       echo "<li class='nav-item'>";
       echo "<a class='nav-link active ml-1  mb-1' href='includes/loguit.inc.php'>Loguit</a></li>";
     }
     else{
+          //Data that is only shown if the user is not logged in
       echo "  <li class='nav-item'>";
       echo "<a class='nav-link active ml-1  mb-1' href='loginpage.php'>Login</a></li>";
     }

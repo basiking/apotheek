@@ -1,4 +1,5 @@
 <?php
+//Checks if the signup data is not empty
 function emptyInputSignup($gebruikersnaam, $email, $password, $passwordRepeat){
     $result = true;
     if (empty($gebruikersnaam) || empty($email) || empty($password) || empty($passwordRepeat)){
@@ -10,6 +11,7 @@ function emptyInputSignup($gebruikersnaam, $email, $password, $passwordRepeat){
     return $result;
 }
 
+//Checks if the username is valid (no weird characters)
 function invalidGebruikersnaam($gebruikersnaam){
     $result = true;
     if (!preg_match("/^[a-zA-Z0-9]*$/" ,$gebruikersnaam )){
@@ -21,6 +23,7 @@ function invalidGebruikersnaam($gebruikersnaam){
     return $result;
 }
 
+//Checks if the email is valid
 function invalidEmail($email){
     $result = true;
     if (!filter_var($email, FILTER_VALIDATE_EMAIL)){
@@ -32,6 +35,7 @@ function invalidEmail($email){
     return $result;
 }
 
+//Checks if the passwords are the same
 function pwdMatch($password, $passwordRepeat){
     $result = true;
     if ($password !== $passwordRepeat){
@@ -43,6 +47,7 @@ function pwdMatch($password, $passwordRepeat){
     return $result;
 }
 
+//Checks if the username and email already exist in the database
 function gebruikersnaamExists($conn, $gebruikersnaam, $email){
     $sql = "SELECT * FROM users WHERE username = ? OR email = ?;";
     $stmt = mysqli_stmt_init($conn);
@@ -67,6 +72,7 @@ function gebruikersnaamExists($conn, $gebruikersnaam, $email){
     mysqli_stmt_close($stmt);
 }
 
+//Function for creating an user
 function createUser($conn, $gebruikersnaam, $email, $password){
     $sql = "INSERT INTO users (username, password, email) VALUES (?,?,?);";
     $stmt = mysqli_stmt_init($conn);
@@ -85,6 +91,7 @@ function createUser($conn, $gebruikersnaam, $email, $password){
     exit();
 }
 
+//Checks if the user actually entered some data
 function emptyInputLogin($gebruikersnaam, $password){
     $result = true;
     if (empty($gebruikersnaam) || empty($password) ){
@@ -96,6 +103,7 @@ function emptyInputLogin($gebruikersnaam, $password){
     return $result;
 }
 
+//Function that logs in the user
 function loginUser($conn, $gebruikersnaam, $password){
     $gebruikerExists = gebruikersnaamExists($conn, $gebruikersnaam, $gebruikersnaam);
 

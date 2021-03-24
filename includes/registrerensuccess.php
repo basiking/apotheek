@@ -20,7 +20,8 @@ if (isset($_POST["submit"])){
 
     //require_once 'db_connection.php';
     require_once "./functies.inc.php";
-
+    
+    //Functions from functies.inc.php
     if (emptyInputSignup($gebruikersnaam, $email, $password, $passwordRepeat) !== false){
         header("location: ../registreren.php?error=emptyInput");
         exit();
@@ -51,7 +52,7 @@ if (isset($_POST["submit"])){
         
     }
 
-
+    //Creates the user
     createUser($conn, $gebruikersnaam, $email, $password, $passwordRepeat );
     
 }
