@@ -1,5 +1,6 @@
 <?php
 include 'includes/head.inc.php';
+include 'includes/db_connection.php';
 
 
 $firstName = $_POST['firstName'];
@@ -12,9 +13,9 @@ $phoneNumber = $_POST['phoneNumber'];
 $email = $_POST['email'];
 $message = $_POST['message'];
 
+$conn = OpenCon();
 
-
-$conn = new mysqli('localhost', 'admin', 'admin', 'pharmacy');
+//$conn = new mysqli('localhost', 'admin', 'admin', 'pharmacy');
 if($conn->connect_error){
     die('Connection failed : '.$conn->connect_error);
 }else{
